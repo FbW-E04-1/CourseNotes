@@ -194,3 +194,8 @@ Before you can use `git` you must tell git who you are and where to contact you,
 # Resources
 
 * [Collaborating with pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests)
+
+
+# Assignment
+
+* [git_merge_conflict](https://classroom.github.com/a/eLqpAHbH)
