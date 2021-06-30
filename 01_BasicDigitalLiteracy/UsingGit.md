@@ -99,6 +99,7 @@ Before you can use `git` you must tell git who you are and where to contact you,
   + Decide what feature you are going to work on
   + Create a specific branch for this feature
   + Give it a self-explanatory name
+    `git checkout -b <feature-branch-name>`
   + Work on this feature branch
 ### Why?
   * Development is all about modules: about breaking problems into smaller problems.
@@ -113,46 +114,50 @@ Before you can use `git` you must tell git who you are and where to contact you,
     - Which files have been added
     - Which files have been deleted
     - Which files have been modified
-  + Stage files with `git add <path/to/file>`
-  + Use the `.` shortcut to add all files
+  + EITHER: Stage files with `git add <path/to/file>`
+  + OR: Use the `.` shortcut to add all files
   + Create a commit with `git commit`
   + Write a detailed message
     - For your team mates
     - For your future self
     - As detailed as possible, so you feel good about the quality of work that you have done.
     - **This is what your future employers will be looking at**
-  + View the history with `git log`
-  + Quick commits with `git commit -am <message>`
+  + View the history with `git log` (and check if your past commit messages are still meaningful to you)
+  + _Quick commits with `git commit -am <message>`_
   + [Create a `gmit` alias](https://dciforks.github.io/nav-menu-2/)
 
 ## Branches
 
-* Create a branch from the current branch
+* Create a branch from the current branch:
   `git checkout -b <new-branch-name>`
-* Create a branch from the current  main branch
+* Create a branch from the current main branch:
   `git checkout -b <new-branch-name> main`
-* Create a branch from another branch
+* Create a branch from another branch:
   `git checkout -b <new-branch-name> <other-branch-name>`
-* Rename a branch
+* Rename a branch:
   `git branch -M <new-name>`
-* Delete a branch
+* Delete a branch:
   `git branch -d <name-of-branch-to-delete>`
-* View info about branches
+* View info about branches:
   `git branch -v`
 
 ## Pull Requests
-* Automatically created when you push a feature branch to GitHub
-* Visit GitHub and click on green Compare & Pull Request button
+* Allow you to compare changes between two branches
+* Automatically created when you `push` a feature branch to GitHub
+### The process
+* Commit your changes on branch <feature-branch>
+* `git push origin <feature-branch>`
+* Visit GitHub and click on the green Compare & Pull Request button
 * Edit PR message
-* Click on green Create Pull Request button
-* **DON'T click on the Merge Pull Request button**
+* Click on the green Create Pull Request button
+* On the next page **DON'T** click on the Merge Pull Request button
 * Click on the  view `command line instructions` link
 
 ## Merging and Merge Conflicts
 * Get the name of the PR branch
 * Create a new branch locally with the name of the PR branch, based on an existing branch. For example:
   `git checkout -b <pr-branch-name> <dev>`
-* snth
+* Fetch the PR branch and merge it with your new branch (`pull` does both actions with one command)
   `git pull https://github.com/<team-member>/<repository> <branch-name>`
 * Resolve any conflicts
   ![Resolve Conflicts](img/resolve_conflict.png)
